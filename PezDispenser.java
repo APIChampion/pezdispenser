@@ -16,7 +16,10 @@ class PezDispenser{
     pezCount = 0;
 
   }
-  //
+  //we use void when nothing is returned. we use a method when something needs to be built
+  //in this we using a variable from the class to the instance.
+  // to say this another way this is called abstractions. we use this as a basis for a
+  //object orieted programming
   public void fill(){
     pezCount = MAX_PEZ;
 
@@ -27,5 +30,8 @@ class PezDispenser{
   public String getCharacterName(){
     return characterName;
 
+  }
+  public boolean isEmpty(){
+    return pezCount == 0;
   }
 }
