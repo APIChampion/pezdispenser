@@ -24,6 +24,25 @@ class PezDispenser{
     pezCount = MAX_PEZ;
 
   }
+//the below boolean method is reducing by 1
+//each time the a pez is dispensed
+//first we set a local boolean variable called
+// wasDispensed to false then we validate if
+// if the value is actually false
+//if isEmpty method returns a false which means
+//the pez has candy then we reduce by one and set
+//the value of boolean to true. if the isEmpty is true
+//meaning that the pez is empty then we do reduce the value
+//of the pezcount
+  public boolean dispense(){
+    boolean wasDispensed = false;
+    if (!isEmpty()){
+      pezCount--;
+      wasDispensed = true;
+    }
+    return wasDispensed;
+
+  }
   //string.contains
   // public boolean contains()
   // below is a method which can be identified because of its return
@@ -31,6 +50,8 @@ class PezDispenser{
     return characterName;
 
   }
+  //below returns true of if pezcount is 0 but if pez isn't zero then the method will
+  //return false
   public boolean isEmpty(){
     return pezCount == 0;
   }
