@@ -20,7 +20,18 @@ public class Example {
     if(dispenser.isEmpty()){
       System.out.println("the pez is empty");
     }
-
+    dispenser.fill(4);
+    dispenser.fill(2);
+    while(dispenser.dispense()){
+      System.out.println("chompy");
+    }
+    try{
+      dispenser.fill(400);
+      System.out.println("this will never happen");
+    } catch(IllegalArgumentException iae){
+      System.out.println("whoa there");
+      System.out.printf("there error was %s", iae.getMessage());
+    }
 
   }
 }

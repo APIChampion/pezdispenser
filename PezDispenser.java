@@ -21,9 +21,23 @@ class PezDispenser{
   // to say this another way this is called abstractions. we use this as a basis for a
   //object orieted programming
   public void fill(){
-    pezCount = MAX_PEZ;
+    fill(MAX_PEZ);
 
   }
+
+  public void fill(int pezAmount){
+    int newAmount = pezCount + pezAmount;
+    if (newAmount > MAX_PEZ){
+      throw new IllegalArgumentException("Too many Pez");
+    }
+
+  }
+
+
+
+
+
+
 //the below boolean method is reducing by 1
 //each time the a pez is dispensed
 //first we set a local boolean variable called
@@ -34,6 +48,8 @@ class PezDispenser{
 //the value of boolean to true. if the isEmpty is true
 //meaning that the pez is empty then we do reduce the value
 //of the pezcount
+
+
   public boolean dispense(){
     boolean wasDispensed = false;
     if (!isEmpty()){
